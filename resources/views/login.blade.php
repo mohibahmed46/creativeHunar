@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{URL::to('/public')}}/assets/images/favicon.png">
-    <title>Login | DNP LeadManager</title>
+    <title>Login | DNP LeadCreativeHunar</title>
     @include('admin.includes.style')
    
 </head>
