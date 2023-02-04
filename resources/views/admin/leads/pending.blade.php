@@ -1,5 +1,5 @@
 @extends('admin.includes.master')
-@section('title', 'Leads')
+@section('title', 'Assigned Leads')
 @section('content')
 
 <div class="container-fluid">
@@ -85,18 +85,21 @@
                 <div class="card-body">
                     <h3 class="add-lead-head">Assigned Leads</h3>
                     <div class="table-responsive m-t-40">                                  
-                   
+                   <?php 
+                        $url="https://api.whatsapp.com/send?phone=";
+                        $text="&text=";             
+                   ?>
                         <table class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
                                     <th>Sr.No</th>
                                     <th>Full Name</th>
                                     <th>Designation</th>
-                                    <th>City</th>
-                                    <th>Country</th>
+                                    <th>Last Message</th>
+                                    <th>Last Call</th>
                                     <th>Mobile No</th>
                                     <th>Category</th>
-                                    <th>Source</th>
+                                    <th>Last Updated Message</th>
                                     <th>Created at</th>
                                     <th>Assigned User</th>
                                     <th>Action</th>
@@ -108,11 +111,15 @@
                                         <td>{{++$key}}</td>
                                         <td>{{$val->name}}</td>
                                         <td>{{$val->designation}}</td>
-                                        <td>{{$val->city}}</td>
-                                        <td>{{$val->country}}</td>
-                                        <td>{{$val->mobile}}</td>
+                                        <td>{{$val->message ? $val->message->message : ''}}</td>
+                                        <td>last Call</td>
+                                        <td> <a href=<?php
+                                            echo $url.$val->mobile. $text;
+                                        ?> target="_blank"> {{$val->mobile}}</a></td>
+
+                                        
                                         <td>{{@$val->category->name}}</td>
-                                        <td>{{@$val->source->source}}</td>
+                                        <td>{{$val->message ? $val->message->created_at->diffForHumans(): '' }}</td>
                                         <td>{{date('d-M-Y h:i a', strtotime($val->created_at))}}</td>
                                         <td>{{@$val->assigned->name}}</td>
                                         <td>
@@ -150,14 +157,31 @@
             <div class="modal-dialog" role="document">
                 
                 <div class="modal-content">
-                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="row" id="leadRemarksModalBody">
-                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="row" id="leadRemarksModalBody">
+                            
                         </div>
-                        
-                    </div>
+                            
                 </div>
             </div>
+        </div>
+        <!-- messages modal start -->
+
+        <div class="modal fade" id="leadviewMessageksModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                
+                <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="row" id="leadviewMessageksModalBody">
+                            
+                        </div>
+                            
+                </div>
+            </div>
+        </div>
+        <!-- Message modal end -->
+
+
 
             <div class="modal fade" id="followupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

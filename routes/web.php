@@ -45,7 +45,10 @@ Route::get('logout', 'authController@logout')->name('logout');
 
             Route::get('/viewRemarks/{id}', 'leadsController@viewRemarks');
             Route::post('remarks', 'leadsController@viewRemarksSubmit')->name('admin.leads.response.remarks');
-
+            // message route start
+            Route::get('/viewMessage/{id}', 'leadsController@viewMessage');
+            Route::post('message', 'leadsController@viewMessageSubmit')->name('admin.leads.response.message');
+            // message route end
             Route::prefix('widget')->group(function(){
 
                 Route::get('pending', 'leadsController@pendingWidget')->name('admin.leads.widget.pending');

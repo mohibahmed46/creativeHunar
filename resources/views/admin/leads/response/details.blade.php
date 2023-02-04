@@ -64,10 +64,11 @@
                 </div>                                                
             </div>                                                         
         </div>
+     
         <div class="row">
             <div class="col-md-3 col-3">
                 <div class=" row cat-title">
-                    <label class="control-label col-md-12">City</label>
+                    <label class="control-label col-md-12">Course</label>
                 </div>                                                
             </div>
             <div class="col-md-1 col-1">
@@ -77,31 +78,14 @@
             </div>
             <div class="col-md-8 col-7">
                 <div class=" row cat-discrip">
-                    <label class="control-label col-md-12">{{$data->city}}</label>
-                </div>                                                
-            </div>                                                         
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-3">
-                <div class=" row cat-title">
-                    <label class="control-label col-md-12">Country</label>
-                </div>                                                
-            </div>
-            <div class="col-md-1 col-1">
-                <div class=" row cat-title">
-                    <label class="control-label col-md-12">:</label>
-                </div>                                                
-            </div>
-            <div class="col-md-8 col-7">
-                <div class=" row cat-discrip">
-                    <label class="control-label col-md-12">{{$data->country}}</label>
+                    <label class="control-label col-md-12">{{$data->category->name}}</label>
                 </div>                                                
             </div>                                                         
         </div>
       </div>
     </div>
     <div class="col-md-12">
-      <div class="modal-body ">
+      <!-- <div class="modal-body ">
         <div class="row">
             <div class="col-md-12">
                 <div class="row cat-main">
@@ -202,13 +186,14 @@
                 </div>                                                
             </div>                                                        
         </div>
-      </div>
+      </div> -->
         <div class="history-info">
             <p class="text-right p-one"><b>{{date('d-M-Y h:i a', strtotime($data->created_at))}}</b>
               <br>By: <b>{{@$data->user->name}}</b></p>
               <div class="row">
                 <div class="col-md-12">
                 <a href="javascript:void(0)" class="btn btn-sm btn-success viewRemarks" data-id="{{$data->id}}" id="pending-remarks-btn"><i class="fa fa-comment"></i> Remarks: {{count($data->remarks)}} </a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-success viewMessage" data-id="{{$data->id}}" id="pending-remarks-btn"><i class="fa fa-comment"></i> Message </a>
                 @if($data->status == '2' || $data->status == '4')
                 <a href="javascript:void(0)" data-href="{{route('admin.leads.mark',base64_encode($data->id))}}" class="btn btn-sm btn-primary checkItem" id="pending-marked-btn"><i class="fa fa-check"></i> Mark</a>
                 <a href="javascript:void(0)" class="btn btn-sm btn-info followupagent" data-id="{{$data->id}}"><i class="mdi mdi-twitch"></i> Follow-up</a>

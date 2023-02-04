@@ -9,6 +9,7 @@ use App\Models\leads\remarks;
 use App\Models\leads\leads;
 use App\Models\leads\categories;
 use App\Models\User;
+use App\Models\Message;
 use Auth;
 use App\Imports\leadImport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -25,7 +26,8 @@ class leadsController extends Controller
     }
 
     function pendingLead(){
-        $data['leads'] = leads::where('status', 2)->orderBy('created_at', 'desc')->paginate(25);
+        $data['leads'] = leads::where('status', 2)->orderBy('created_at', 'desc')->with('category')->paginate(25);
+        // dd($data);
         $data['total_leads'] = leads::count();
         $data['total_pending_leads'] = leads::where('status', 2)->count();
         $data['total_marked_leads'] = leads::where('status', 3)->count();
@@ -155,6 +157,31 @@ class leadsController extends Controller
         $data['remarks'] = remarks::where('lead_id', $id)->orderBy('created_at', 'desc')->get();
         return view('admin.leads.response.remarks')->with($data);
     }
+// message start
+    function viewMessage($id){
+        $data['lead_id'] = $id;
+        $data['message'] = Message::where('lead_id', $id)->orderBy('created_at', 'desc')->get();
+        // dd($data);
+
+        return view('admin.leads.response.message')->with($data);
+    }
+
+    
+    function viewMessageSubmit(Request $request){
+        $data = $request->all();
+
+        $r = new Message;
+        $r->lead_id = $data['lead_id'];
+        $r->message = $data['message'];
+        $r->created_by = Auth::id();
+        $r->save();
+        // dd($r->message);
+        
+        return redirect()->back()->with('success', 'New Message:'.$r->message);
+
+    }
+
+// message end
 
     function viewRemarksSubmit(Request $request){
         $data = $request->all();

@@ -1,15 +1,19 @@
 body {
     font-family: 'Roboto' !important;
 }
-    .left-sidebar {
-
-    background: #17263a;
+.left-sidebar {
+    background-image: linear-gradient(180deg, #1E222C 35%, #000000 100%) !important;
 }
 .topbar .navbar-header {
-    background: #17263a !important;
+    background-image: linear-gradient(10deg, #1E222C 35%, #000000 100%)  !important;
 }
-
-
+html body .bg-inverse {
+    background-image: linear-gradient(180deg, #1E222C 35%, #000000 100%) !important;
+}
+button.btn.btn-circle.btn-lg.btn-info.waves-effect.waves-dark {
+    background: #1aac80 !important;
+    border: 0;
+}
 .sidebar-nav {
     background: transparent;
     padding: 0px 10px;
@@ -27,14 +31,30 @@ body {
     background: #fff !important;
 }
 nav.sidebar-nav ul li a {
-    color: #849bb9;
+    color: white;
     padding: 15px 30px 15px 30px;
     display: block;
     font-size: 15px;
 }
+.sidebar-nav .has-arrow:after {
+    border-color: white !important;
+    border-width: 2px 0 0 2px !important;
+}
+.sidebar-nav > ul > li.active > a {
+    color: white !important;
+    border-color: #1AAC80 !IMPORTANT;
+}
 nav.sidebar-nav ul li a:hover {
-    background: #1d2f47;
-    color: #849bb9;
+    border-radius: 8px;
+    background: #1AAC80;
+    color: white;
+}
+.sidebar-nav>ul>li>a i {
+    width: 30px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    color: white !important;
 }
 nav.sidebar-nav ul li a:active {
     background: #1d2f47;
@@ -82,13 +102,25 @@ table#example23 thead tr th:after {
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
     color: #ffffff!important;
-    border: 1px solid #7f63f4 !important;
-    background-color: #7f63f4 !important;
+    border: 1px solid ##767D89 !important;
+    background-color: ##767D89 !important;
+}
+.login-heading {
+    text-align: center;
+    font-weight: 900;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+    color:#767D89;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #ffffff!important;
+    border: 1px solid #13ae81 !important;
+    background-color:  #13ae81 !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     color: #ffffff!important;
-    border: 1px solid #7f63f4 !important;
-    background-color: #7f63f4 !important;
+    border: 1px solid #1AAC80 !important;
+    background-color: #1AAC80 !important;
 }
 .green
 {
@@ -120,6 +152,15 @@ table#example23 thead tr th:after {
     border: none;
     color: white;
 }
+.btn-danger, .btn-danger.disabled {
+    background: #1AAC80;
+    border: 1px solid #1AAC80;
+}
+.topbar ul.dropdown-user li .dw-user-box .u-text .btn:hover {
+    background: #1AAC80;
+    border: 1px solid #1AAC80;
+}
+
 .red
 {
     background: #ff0008; 
@@ -163,8 +204,9 @@ html body .m-t-40 {
 }
 .sec-1 h2 {
     font-size: 32px;
-    color: #263871;
+    color:black;
     font-weight: 500;
+    margin: 0;
 }
 .sec-1 {
     padding-top: 8px;
@@ -179,9 +221,30 @@ html body .m-t-40 {
 button.btn.btn-success.search-submit {
     padding: 6px 50px;
     font-size: 20px;
-    background: #7f63f4;
+    background: #1AAC80 !important;
     border: 0px;
     margin-bottom: 25px;
+}
+.sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
+    color: #1AAC80;
+    font-weight: 500;
+}
+.btn-primary, .btn-primary.disabled {
+    background: #1AAC80;
+    border: 1px solid #1AAC80;
+}
+.btn-primary.disabled:hover, .btn-primary:hover {
+    background: #1AAC80;
+    border: 1px solid #1AAC80;
+}
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #1AAC80;
+    border-color: #1AAC80;
+}
+.btn-info, .btn-info.disabled {
+    background: #1AAC80 !IMPORTANT;
+    border: 1px solid #1AAC80 !important;
 }
 .sec-1 h6 {
     font-size: 18px;
@@ -234,9 +297,9 @@ input.form-control {
     color: #abafb3;
 }
 .cat-main label {
-    color: #7f63f4;
+    color: #767d89 !IMPORTANT;
     font-size: 22px !important;
-    background: #f2effe;
+    background: #1aac8042 !IMPORTANT;
     padding: 15px 20px;
 }
 .modal-content {
@@ -254,9 +317,9 @@ input.form-control {
 h2#exampleModalLabel {
     font-size: 32px;
     text-align: center;
-    color: #263871;
+    color: #1AAC80;
     width: 100%;
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 15px;
 }
 .modal-body {
@@ -284,14 +347,14 @@ padding: 10px 15px;
 .form-body {
     padding: 30px 20px;
 }
-.add-lead-head
-{
-    color: #263871;
+.add-lead-head {
+    color: #767d89;
     font-size: 22px !important;
-    background: #f2effe;
+    background: #1aac8042;
     padding: 15px 20px;
     margin-top: 20px;
 }
+
 label.control-label {
     color: #464a53;
 }
@@ -383,12 +446,6 @@ padding: 10px 15px;
     color: #abafb3;
 }
 
-.cat-main label {
-    color: #7f63f4;
-    font-size: 22px !important;
-    background: #f2effe;
-    padding: 15px 20px;
-}
 /*.add-lead-popup
 {
     float: right;
@@ -431,6 +488,12 @@ button.btn.btn-success.search-submit {
     padding: 5px 25px;
     font-size: 16px;
 }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #ffffff!important;
+    border: 1px solid #13AE81 !important;
+    background-color: #13AE81 !important;
+}
 .add-lead {
 
     font-size: 15px;
@@ -466,5 +529,8 @@ button.close {
 }
 
 .sidebar-nav ul li.nav-small-cap {
-    color: #fff;
+    color: #1AAC80;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }

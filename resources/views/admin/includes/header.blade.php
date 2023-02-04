@@ -4,12 +4,12 @@
             <a class="navbar-brand" href="{{URL::to('/admin')}}">
                 <!-- Logo icon -->
                 <b>
-                    <img src="{{URL::to('/public/assets/')}}/images/logo-icon.png" alt="homepage" class="dark-logo">
+                    <img src="{{URL::to('/public/assets/')}}/images/logo-icon-1.png" alt="homepage" class="dark-logo">
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
                 <span style="">
-                     <img src="{{URL::to('/public/assets/')}}/images/logo-text.png" alt="homepage" class="dark-logo">
+                     <img src="{{URL::to('/public/assets/')}}/images/logo-text-1.png" alt="homepage" class="dark-logo">
                 </span> 
             </a>
         </div>

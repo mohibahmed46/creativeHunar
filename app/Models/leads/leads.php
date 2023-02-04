@@ -8,6 +8,8 @@ use App\Models\leads\source;
 use App\Models\leads\categories;
 use App\Models\leads\remarks;
 use App\Models\User;
+use App\Models\Message;
+
 use Auth;
 
 class leads extends Model
@@ -53,5 +55,9 @@ class leads extends Model
     }
     public function remarks(){
         return $this->hasMany(remarks::class, 'lead_id', 'id');
+    }
+
+    public function message(){
+        return $this->hasOne(Message::class, 'lead_id', 'id')->latest();
     }
 }

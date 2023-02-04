@@ -1,5 +1,5 @@
 @extends('admin.includes.master')
-@section('title', 'Leads')
+@section('title', 'Fresh Leads')
 @section('content')
 
 <div class="container-fluid">

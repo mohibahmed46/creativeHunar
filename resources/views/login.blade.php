@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <form class="form-horizontal form-material" method="post">
                         @csrf
-                        <h1 class="login-heading">DNP LEADs</h1>
+                        <h1 class="login-heading">CreativeHunar</h1>
                         <h3 class="box-title m-b-20">Sign In  <small>(Administration)</small></h3>
                         @if(session()->has('error'))
                             <div class="alert alert-danger">

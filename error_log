@@ -20,3 +20,16 @@
 [30-Oct-2021 02:22:57 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.32. in /home2/dnpproje/public_html/leadManager/vendor/composer/platform_check.php on line 24
 [31-Oct-2021 23:11:24 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.32. in /home2/dnpproje/public_html/leadManager/vendor/composer/platform_check.php on line 24
 [31-Oct-2021 23:26:22 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.32. in /home2/dnpproje/public_html/leadManager/vendor/composer/platform_check.php on line 24
+[07-Jan-2023 08:37:59 America/Boise] PHP Warning:  require(/home2/dnpproje/public_html/creativeHunarLeads/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php on line 34
+[07-Jan-2023 08:37:59 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/dnpproje/public_html/creativeHunarLeads/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php:34
+Stack trace:
+#0 /home2/dnpproje/public_html/creativeHunarLeads/index.php(21): require_once()
+#1 {main}
+  thrown in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php on line 34
+[07-Jan-2023 08:38:06 America/Boise] PHP Warning:  require(/home2/dnpproje/public_html/creativeHunarLeads/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php on line 34
+[07-Jan-2023 08:38:06 America/Boise] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/dnpproje/public_html/creativeHunarLeads/public/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php:34
+Stack trace:
+#0 /home2/dnpproje/public_html/creativeHunarLeads/index.php(21): require_once()
+#1 {main}
+  thrown in /home2/dnpproje/public_html/creativeHunarLeads/public/index.php on line 34
+[07-Jan-2023 08:42:03 America/Boise] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 8.0.25. in /home2/dnpproje/public_html/creativeHunarLeads/vendor/composer/platform_check.php on line 24

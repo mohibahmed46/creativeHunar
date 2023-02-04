@@ -15,7 +15,7 @@
               <div class="col-md-12">
                 <label>Follow-Up Remarks</label>  
                 <textarea rows="5" placeholder="Follow-Up Remarks" name="followup_remarks" class="form-control">{{$lead->followup_remarks}}</textarea>
-              </div>
+              </div>followupagent
               <div class="col-md-12">
               <button type="submit" class="btn btn-primary">Save</button>
               </div>

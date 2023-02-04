@@ -40,6 +40,19 @@
     });
   });
 
+// messages
+  $(document).on('click', '.viewMessage', function(){
+    var id = $(this).data('id');
+    $('#leadDetailModal').modal('hide');
+    $.get("{{URL::to('/')}}/admin/leads/viewMessage/"+id, function(data){
+
+      $('#leadviewMessageksModalBody').html(data);
+      $('#leadviewMessageksModal').modal('show');
+    });
+  });
+
+
+
  $(document).on('click', '.viewDetailLead', function(){
         var id = $(this).data('id');
         $('#leadDetailModal').modal('show');
